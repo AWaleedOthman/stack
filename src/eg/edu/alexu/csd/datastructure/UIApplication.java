@@ -5,8 +5,8 @@ import java.util.Scanner;
 public class UIApplication {
 
     public static void main(String[] args) {
-        System.out.println("-Anything apart from {+, -, *, /, (, )} is considered an operand.\n" +
-                "-Operands can be more than one character without space—i.e. \"ab\" is one operand, whereas \"a b\" " +
+        System.out.println("\n-Anything apart from {+, -, *, /, (, )} is considered an operand.\n" +
+                "-Operands can be more than one character without space—i.e. \"ab\" is one operand,\n whereas \"a b\" " +
                 "are two different operands.\n" +
                 "-\"x_2\", \"x2\", \"Xn\", \"Xnew\", etc... are all examples of operands.\n");
         ExpressionEvaluator ev = new ExpressionEvaluator();
@@ -64,6 +64,7 @@ public class UIApplication {
             }
             symbols.reverse();
             temp.close();
+            if (symbols.size() == 0) same = false;
 
             String expression = postfix;
             int val;

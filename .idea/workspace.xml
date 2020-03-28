@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="stack:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="1149e5f4-4a91-44cf-a225-144b1a56b041" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/stack_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/stack/eg/edu/alexu/csd/datastructure/ExpressionEvaluator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/stack/eg/edu/alexu/csd/datastructure/ExpressionEvaluator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/stack/eg/edu/alexu/csd/datastructure/Stack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/stack/eg/edu/alexu/csd/datastructure/Stack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/stack/eg/edu/alexu/csd/datastructure/StackTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/eg/edu/alexu/csd/datastructure/StackTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eg/edu/alexu/csd/datastructure/ExpressionEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eg/edu/alexu/csd/datastructure/ExpressionEvaluator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eg/edu/alexu/csd/datastructure/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eg/edu/alexu/csd/datastructure/Stack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/eg/edu/alexu/csd/datastructure/UIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eg/edu/alexu/csd/datastructure/UIApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/eg.edu.alexu.csd.datastructure/StackTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/eg.edu.alexu.csd.datastructure/StackTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,6 +26,7 @@
         <option value="Interface" />
         <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JavaFXApplication" />
       </list>
     </option>
   </component>
@@ -46,6 +47,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
@@ -57,6 +59,9 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
@@ -152,8 +157,18 @@
       <workItem from="1585303915031" duration="8034000" />
       <workItem from="1585324121714" duration="8599000" />
       <workItem from="1585390107848" duration="10950000" />
-      <workItem from="1585406310829" duration="2693000" />
+      <workItem from="1585406310829" duration="2753000" />
+      <workItem from="1585416385089" duration="1083000" />
+      <workItem from="1585419542236" duration="268000" />
     </task>
+    <task id="LOCAL-00001" summary="UIApplication">
+      <created>1585411704072</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585411704072</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,28 +178,38 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/stack" />
     </ignored-roots>
+    <MESSAGE value="UIApplication" />
+    <option name="LAST_COMMIT_MESSAGE" value="UIApplication" />
   </component>
   <component name="WindowStateProjectService">
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1585309042792">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1585309042792" />
-    <state width="1493" height="329" key="GridCell.Tab.0.bottom" timestamp="1585411658827">
+    <state x="530" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1585416413445">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585411658827" />
-    <state width="1493" height="329" key="GridCell.Tab.0.center" timestamp="1585411658827">
+    <state x="530" y="202" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1585416413445" />
+    <state x="406" y="11" key="CommitChangelistDialog2" timestamp="1585411701758">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585411658827" />
-    <state width="1493" height="329" key="GridCell.Tab.0.left" timestamp="1585411658826">
+    <state x="406" y="11" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585411701758" />
+    <state width="1493" height="329" key="GridCell.Tab.0.bottom" timestamp="1585411726253">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585411658826" />
-    <state width="1493" height="329" key="GridCell.Tab.0.right" timestamp="1585411658827">
+    <state width="1493" height="329" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585411726253" />
+    <state width="1493" height="329" key="GridCell.Tab.0.center" timestamp="1585411726253">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="329" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585411658827" />
+    <state width="1493" height="329" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585411726253" />
+    <state width="1493" height="329" key="GridCell.Tab.0.left" timestamp="1585411726253">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="329" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585411726253" />
+    <state width="1493" height="329" key="GridCell.Tab.0.right" timestamp="1585411726253">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="329" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585411726253" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1585402832557">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -201,18 +226,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1585402832557" />
-    <state x="279" y="58" key="SettingsEditor" timestamp="1585397697211">
+    <state x="279" y="0" key="SettingsEditor" timestamp="1585416427105">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="279" y="58" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585397697211" />
+    <state x="279" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1585416427105" />
     <state width="498" height="446" key="SwitcherDM" timestamp="1585263743366">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1585263743366" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585406312945">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585419546054">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585406312945" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585419546054" />
     <state x="498" y="313" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585262539075">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -225,6 +250,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="540" y="132" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.824@0.0.1536.824" timestamp="1585309658178" />
+    <state x="209" y="39" key="new project wizard" timestamp="1585419808358">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="39" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1585419808358" />
     <state x="477" y="38" key="refactoring.ChangeSignatureDialog" timestamp="1585399189986">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
