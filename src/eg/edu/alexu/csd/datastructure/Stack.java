@@ -71,4 +71,13 @@ public class Stack implements IStack{
     public int size() {
         return size;
     }
+
+    public void reverse() {
+        Stack reversed = new Stack();
+        while (!this.isEmpty()) {
+            reversed.push(this.pop());
+        }
+        this.last = reversed.last;
+        this.size = reversed.size;
+    }
 }

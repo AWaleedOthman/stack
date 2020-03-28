@@ -19,7 +19,7 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
      */
     @Override
     public String infixToPostfix(String expression) {
-        expression = putSpace(expression);
+        expression = fixSpaces(expression);
         if (!validInfix(expression, true)) throw new RuntimeException("Invalid infix expression");
 
         StringBuilder sb = new StringBuilder();
@@ -59,7 +59,7 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
      * @param expression: infix expression before checking spaces
      * @return expression after putting spaces
      */
-    String putSpace(String expression) {
+    String fixSpaces(String expression) {
         Pattern p = Pattern.compile("[+--*/()]");
         Matcher m = p.matcher(expression);
         StringBuilder sb = new StringBuilder(expression);
@@ -89,9 +89,9 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
      * @return true if the infix expression is valid and false otherwise
      */
     boolean validInfix(String expression, boolean spaced) {
-        if (!spaced) expression = putSpace(expression);
+        if (!spaced) expression = fixSpaces(expression);
         /*
-         * Note that AFTER calling putSpace, Strings returning from below calls of sc.next()
+         * Note that AFTER calling fixSpaces, Strings returning from below calls of sc.next()
          * returns either operators, '(', ')', or operands which are anything else.
          * */
         Scanner sc = new Scanner(expression);
@@ -138,7 +138,7 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
      */
     @Override
     public int evaluate(String expression) {
-        expression = putSpace(expression);
+        expression = fixSpaces(expression);
         if (!validPostfix(expression, true)) throw new RuntimeException("Invalid postfix expression");
         Stack stk = new Stack();
         String input;
@@ -193,7 +193,7 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
      * @return true if the postfix expression is valid and false otherwise
      */
     boolean validPostfix(String expression, boolean spaced) {
-        if (!spaced) expression = putSpace(expression);
+        if (!spaced) expression = fixSpaces(expression);
         Scanner sc = new Scanner(expression);
         int operand = 1, operator = 0;
 
@@ -213,7 +213,3 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
         return true;
     }
 }
-/*
-TODO UIApplication
-Also try GUI
- */

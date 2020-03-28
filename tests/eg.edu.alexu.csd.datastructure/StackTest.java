@@ -84,4 +84,17 @@ class StackTest {
         assertEquals(0, stk.size());
 
     }
+
+    @Test
+    void reverse() {
+        Stack stk = new Stack();
+        stk.push("first");
+        stk.push("second");
+        stk.push("third");
+        stk.reverse();
+        assertEquals("first", stk.pop());
+        assertEquals("second", stk.pop());
+        assertEquals("third", stk.peek());
+        assertEquals("third", stk.pop());
+    }
 }
