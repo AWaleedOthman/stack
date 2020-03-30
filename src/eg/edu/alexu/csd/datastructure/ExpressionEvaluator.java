@@ -19,7 +19,7 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
      */
     @Override
     public String infixToPostfix(String expression) {
-        expression = fixSpaces(expression);
+        expression = fixInfix(expression);
         if (!validInfix(expression, true)) throw new RuntimeException("Invalid infix expression");
 
         StringBuilder sb = new StringBuilder();
@@ -59,23 +59,71 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
      * @param expression: infix expression before checking spaces
      * @return expression after putting spaces
      */
-    String fixSpaces(String expression) {
+    public String fixPostfix(String expression) {
         Pattern p = Pattern.compile("[+--*/()]");
         Matcher m = p.matcher(expression);
         StringBuilder sb = new StringBuilder(expression);
         int charAdded = 0, index;
         while (m.find()) {
             index = m.start();
-            if (index != 0 && expression.charAt(index - 1) != ' ') { //add space before operand
+            if (index != 0 && sb.charAt(index + charAdded - 1) != ' ') { //add space before operand
                 sb.insert(index + charAdded, ' ');
                 ++charAdded;
             }
-            if (index != expression.length() - 1 && expression.charAt(index + 1) != ' ') { //add space after operand
+            if (index != expression.length() - 1 && sb.charAt(index + charAdded + 1) != ' ') { //add space after operand
                 sb.insert(index + charAdded + 1, ' ');
                 ++charAdded;
             }
         }
-        return sb.toString().trim();
+        expression = sb.toString().trim();
+        expression = expression.replaceAll("  +", " ");
+        return expression;
+    }
+
+    /**
+     * uses fixPostfix to fix spaces then fixes negative number issues
+     *
+     * @param expression: infix expression to fix
+     * @return fixed infix expression
+     */
+    public String fixInfix(String expression) {
+        expression = fixPostfix(expression);
+        expression = expression.replaceAll("- \\+|\\+ -", "-");
+        expression = expression.replaceAll("- -", "+");
+        StringBuilder sb = new StringBuilder(expression);
+        int i;
+        if (sb.length() == 0) return "";
+        if (sb.charAt(0) == '-') { //negative in the beginning
+            i = 0; //index of negative
+            if (addParenthesis(sb, i)) return ""; //validInfix will return fasle
+        }//END section negative in the beginning
+        Pattern p = Pattern.compile("\\( -|/ -|\\* -");
+        Matcher m = p.matcher(sb);
+        while (m.find()) {
+            i = m.start() + 2;
+            if (addParenthesis(sb, i)) return "";
+            m = p.matcher(sb);
+        }
+        return sb.toString();
+    }
+
+    private boolean addParenthesis(StringBuilder sb, int i) { //method extracted from duplicate code
+        sb.insert(i, "( 0 ");
+        i += 4;
+        if (!sb.substring(i + 2, i + 3).matches("[+--*/()]")/*operand*/) {//operand after negative
+            sb.insert(i + 3, " )");
+        } else if (sb.charAt(i + 2) == '(') {//'(' after negative
+            int closingIndex = i + 2;
+            int parenthesis = 1;
+            while (closingIndex < sb.length() && parenthesis != 0) {
+                ++closingIndex;
+                if (sb.charAt(closingIndex) == '(') ++parenthesis;
+                else if (sb.charAt(closingIndex) == ')') --parenthesis;
+            }
+            if (parenthesis != 0) return true; //invalid
+            sb.replace(i + 2, closingIndex + 1, fixInfix(sb.substring(i + 2, closingIndex + 1) + " )"));
+        }
+        return false;
     }
 
     /**
@@ -85,13 +133,15 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
      * Anything apart from {+,-,*,/,(,)} is considered operand
      *
      * @param expression: infix expression to be validated
-     * @param spaced:     if the expression is space separated
+     * @param fixed:      if the expression is space separated and fixed for negative numbers
      * @return true if the infix expression is valid and false otherwise
      */
-    boolean validInfix(String expression, boolean spaced) {
-        if (!spaced) expression = fixSpaces(expression);
+    public boolean validInfix(String expression, boolean fixed) {
+        if (!fixed) {
+            expression = fixInfix(expression);
+        }
         /*
-         * Note that AFTER calling fixSpaces, Strings returning from below calls of sc.next()
+         * Note that AFTER calling fixInfix, Strings returning from below calls of sc.next()
          * returns either operators, '(', ')', or operands which are anything else.
          * */
         Scanner sc = new Scanner(expression);
@@ -138,7 +188,7 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
      */
     @Override
     public int evaluate(String expression) {
-        expression = fixSpaces(expression);
+        expression = fixPostfix(expression);
         if (!validPostfix(expression, true)) throw new RuntimeException("Invalid postfix expression");
         Stack stk = new Stack();
         String input;
@@ -189,11 +239,11 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
      * of operators has to be equal to the number of operands minus one in the end.
      *
      * @param expression: postfix expression to be validated
-     * @param spaced:     if the expression is space separated
+     * @param fixed:     if the expression is space separated
      * @return true if the postfix expression is valid and false otherwise
      */
-    boolean validPostfix(String expression, boolean spaced) {
-        if (!spaced) expression = fixSpaces(expression);
+    public boolean validPostfix(String expression, boolean fixed) {
+        if (!fixed) expression = fixPostfix(expression);
         Scanner sc = new Scanner(expression);
         int operand = 1, operator = 0;
 

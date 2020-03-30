@@ -56,6 +56,11 @@ class ExpressionEvaluatorTest {
         assertFalse(ev.validInfix("a*() *d", false));
         assertFalse(ev.validInfix("a*(a+b) *c(d)", false));
         assertFalse(ev.validInfix("a*(a+b)(a-b) *c", false));
+        assertFalse(ev.validInfix("", false));
+        assertFalse(ev.validInfix(" ", false));
+        assertFalse(ev.validInfix(")", false));
+        assertTrue(ev.validInfix("0", false));
+        assertFalse(ev.validInfix("-5*((6*", false));
     }
 
     @Test
@@ -66,6 +71,8 @@ class ExpressionEvaluatorTest {
         assertFalse(ev.validPostfix("a b / c - d e * + a c *", false));
         assertFalse(ev.validPostfix("a b c -d + / e( a - * c *", false));
         assertFalse(ev.validPostfix("a b c -d + / e a - * c *)", false));
+        assertFalse(ev.validPostfix("", false));
+        assertFalse(ev.validPostfix(" ", false));
     }
 
 }

@@ -22,7 +22,7 @@ public class UIApplication {
                 System.out.println("Enter infix expression:");
                 in = sc.nextLine();
                 if (in.trim().equalsIgnoreCase("exit")) break;
-                in = ev.fixSpaces(in);
+                in = ev.fixInfix(in);
 
                 while (!ev.validInfix(in, true)) {
                     System.out.println("Invalid Input");
@@ -34,7 +34,7 @@ public class UIApplication {
                         flag = true;
                         break;
                     }
-                    in = ev.fixSpaces(in);
+                    in = ev.fixInfix(in);
                 }
                 if (flag) break;
                 flag = false;
