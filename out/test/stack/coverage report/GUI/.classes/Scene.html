@@ -1,0 +1,177 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: Scene</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">GUI</a> ]
+</div>
+
+<h1>Coverage Summary for Class: Scene (GUI)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">Scene</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 4)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 44)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package GUI;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import eg.edu.alexu.csd.datastructure.ExpressionEvaluator;
+<i>4</i>&nbsp;
+<i>5</i>&nbsp;import eg.edu.alexu.csd.datastructure.Stack;
+<i>6</i>&nbsp;import javafx.fxml.FXML;
+<i>7</i>&nbsp;import javafx.scene.control.*;
+<i>8</i>&nbsp;
+<i>9</i>&nbsp;import java.util.Scanner;
+<i>10</i>&nbsp;
+<i>11</i>&nbsp;
+<b class="nc"><i>12</i>&nbsp;public class Scene {</b>
+<i>13</i>&nbsp;
+<i>14</i>&nbsp;    private String sPostfix;
+<b class="nc"><i>15</i>&nbsp;    private Stack symbols = new Stack();</b>
+<i>16</i>&nbsp;    private String expression;
+<i>17</i>&nbsp;
+<i>18</i>&nbsp;    @FXML
+<i>19</i>&nbsp;    private Button evaluateButton;
+<i>20</i>&nbsp;    @FXML
+<i>21</i>&nbsp;    private Button nextButton;
+<i>22</i>&nbsp;    @FXML
+<i>23</i>&nbsp;    private TextField infixTextfield, symbolsTextfield;
+<i>24</i>&nbsp;    @FXML
+<i>25</i>&nbsp;    private Label postfixLabel, resultLabel, symbolsLabel, invalidLabel;
+<i>26</i>&nbsp;
+<i>27</i>&nbsp;    @FXML
+<i>28</i>&nbsp;    private void displayPostfix() {
+<b class="nc"><i>29</i>&nbsp;        ExpressionEvaluator ev = new ExpressionEvaluator();</b>
+<b class="nc"><i>30</i>&nbsp;        String sInfix = infixTextfield.getText();</b>
+<b class="nc"><i>31</i>&nbsp;        if (ev.validInfix(sInfix, false)) {</b>
+<b class="nc"><i>32</i>&nbsp;            sPostfix = ev.infixToPostfix(sInfix);</b>
+<b class="nc"><i>33</i>&nbsp;            postfixLabel.setText(sPostfix);</b>
+<b class="nc"><i>34</i>&nbsp;            evaluateButton.setDisable(false);</b>
+<i>35</i>&nbsp;        } else {
+<b class="nc"><i>36</i>&nbsp;            postfixLabel.setText(&quot;Invalid Infix Expression&quot;);</b>
+<b class="nc"><i>37</i>&nbsp;            evaluateButton.setDisable(true);</b>
+<i>38</i>&nbsp;        }
+<b class="nc"><i>39</i>&nbsp;    }</b>
+<i>40</i>&nbsp;
+<i>41</i>&nbsp;    @FXML
+<i>42</i>&nbsp;    private void displayResult() {
+<b class="nc"><i>43</i>&nbsp;        ExpressionEvaluator ev = new ExpressionEvaluator();</b>
+<i>44</i>&nbsp;
+<i>45</i>&nbsp;        /*creating a stack of symbols in postfix*/
+<b class="nc"><i>46</i>&nbsp;        Scanner sc = new Scanner(sPostfix);</b>
+<i>47</i>&nbsp;        String sTemp;
+<b class="nc"><i>48</i>&nbsp;        while (sc.hasNext()) {</b>
+<b class="nc"><i>49</i>&nbsp;            sTemp = sc.next();</b>
+<b class="nc"><i>50</i>&nbsp;            if (!sTemp.matches(&quot;[+--*/]&quot;)/*NOT operand (symbol or int)*/</b>
+<b class="nc"><i>51</i>&nbsp;                    &amp;&amp; !sTemp.matches(&quot;\\d+&quot;)/*Not int*/) {</b>
+<b class="nc"><i>52</i>&nbsp;                symbols.push(sTemp);</b>
+<i>53</i>&nbsp;            }
+<i>54</i>&nbsp;        }
+<b class="nc"><i>55</i>&nbsp;        symbols.reverse();</b>
+<b class="nc"><i>56</i>&nbsp;        sc.close();</b>
+<i>57</i>&nbsp;
+<b class="nc"><i>58</i>&nbsp;        if (symbols.isEmpty()) {</b>
+<b class="nc"><i>59</i>&nbsp;            resultLabel.setText(String.valueOf(ev.evaluate(sPostfix)));</b>
+<i>60</i>&nbsp;        } else {
+<b class="nc"><i>61</i>&nbsp;            expression = sPostfix;</b>
+<b class="nc"><i>62</i>&nbsp;            symbolsLabel.setText(symbols.peek() + &quot; =&quot;);</b>
+<b class="nc"><i>63</i>&nbsp;            nextButton.setDisable(false);</b>
+<b class="nc"><i>64</i>&nbsp;            symbolsTextfield.setEditable(true);</b>
+<i>65</i>&nbsp;        }
+<b class="nc"><i>66</i>&nbsp;    }</b>
+<i>67</i>&nbsp;
+<i>68</i>&nbsp;    @FXML
+<i>69</i>&nbsp;    private void getSymbols() {
+<b class="nc"><i>70</i>&nbsp;        ExpressionEvaluator ev = new ExpressionEvaluator();</b>
+<i>71</i>&nbsp;        int val;
+<i>72</i>&nbsp;        try {
+<b class="nc"><i>73</i>&nbsp;            val = Integer.parseInt(symbolsTextfield.getText());</b>
+<b class="nc"><i>74</i>&nbsp;        } catch (Exception e) {</b>
+<b class="nc"><i>75</i>&nbsp;            invalidLabel.setText(&quot;Invalid Input&quot;);</b>
+<b class="nc"><i>76</i>&nbsp;            return;</b>
+<b class="nc"><i>77</i>&nbsp;        }</b>
+<i>78</i>&nbsp;
+<b class="nc"><i>79</i>&nbsp;        invalidLabel.setText(&quot;&quot;);</b>
+<b class="nc"><i>80</i>&nbsp;        expression = expression.replaceAll((String) symbols.pop(), Integer.toString(val));</b>
+<i>81</i>&nbsp;
+<b class="nc"><i>82</i>&nbsp;        while (!symbols.isEmpty() &amp;&amp; !expression.contains((String) symbols.peek())) symbols.pop();</b>
+<i>83</i>&nbsp;
+<b class="nc"><i>84</i>&nbsp;        if (symbols.isEmpty()) {</b>
+<b class="nc"><i>85</i>&nbsp;            nextButton.setDisable(true);</b>
+<b class="nc"><i>86</i>&nbsp;            symbolsTextfield.setText(&quot;&quot;);</b>
+<b class="nc"><i>87</i>&nbsp;            symbolsTextfield.setEditable(false);</b>
+<b class="nc"><i>88</i>&nbsp;            symbolsLabel.setText(&quot;&quot;);</b>
+<b class="nc"><i>89</i>&nbsp;            resultLabel.setText(String.valueOf(ev.evaluate(expression)));</b>
+<i>90</i>&nbsp;        } else {
+<b class="nc"><i>91</i>&nbsp;            symbolsLabel.setText(symbols.peek() + &quot; =&quot;);</b>
+<i>92</i>&nbsp;        }
+<b class="nc"><i>93</i>&nbsp;    }</b>
+<i>94</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-04-01 19:38</div>
+</div>
+</body>
+</html>

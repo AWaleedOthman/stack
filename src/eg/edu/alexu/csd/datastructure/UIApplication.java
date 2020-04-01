@@ -58,7 +58,7 @@ public class UIApplication {
             /*creating a stack of symbols in postfix*/
             while (temp.hasNext()) {
                 inTemp = temp.next();
-                if (!inTemp.matches("[+--*/]")/*IS operand (symbol or int)*/ && !inTemp.matches("\\d+")/*Not int*/) {
+                if (!inTemp.matches("[+--*/]")/*NOT operand (symbol or int)*/ && !inTemp.matches("\\d+")/*Not int*/) {
                     symbols.push(inTemp);
                 }
             }

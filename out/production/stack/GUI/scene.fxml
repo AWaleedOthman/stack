@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="GUI.Scene">
+    <GridPane alignment="CENTER" prefHeight="400.0" prefWidth="600.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="13.0"/>
+            <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="195.0" minWidth="10.0" prefWidth="46.2"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.2" minWidth="6.0" prefWidth="16.199992370605457"/>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="557.2" minWidth="10.0" prefWidth="446.2"/>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="543.1999999999999" minWidth="10.0"
+                               prefWidth="82.20000000000005"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="216.2" minHeight="10.0" prefHeight="78.2" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="293.4000076293945" minHeight="10.0" prefHeight="77.8" vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="293.4000076293945" minHeight="10.0" prefHeight="86.19999999999999"
+                            vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="293.4000076293945" minHeight="10.0" prefHeight="34.60000000000002"
+                            vgrow="SOMETIMES"/>
+            <RowConstraints maxHeight="293.4000076293945" minHeight="10.0" prefHeight="122.80000000000001"
+                            vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <Label prefHeight="18.0" prefWidth="29.0" text="Infix:" GridPane.columnIndex="1">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Label>
+        <Label text="Postfix:" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="infixTextfield" GridPane.columnIndex="3"/>
+        <Button fx:id="okButton" mnemonicParsing="false" onAction="#displayPostfix" text="OK"
+                GridPane.columnIndex="4"/>
+        <Label fx:id="postfixLabel" prefHeight="18.0" prefWidth="493.0" GridPane.columnIndex="3"
+               GridPane.rowIndex="1"/>
+        <Button fx:id="evaluateButton" disable="true" mnemonicParsing="false" onAction="#displayResult"
+                text="Evaluate" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+        <Label text="Result:" GridPane.columnIndex="1" GridPane.rowIndex="4">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Label>
+        <Label fx:id="resultLabel" prefHeight="18.0" prefWidth="466.0" GridPane.columnIndex="3"
+               GridPane.rowIndex="4">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Label>
+        <Button fx:id="nextButton" disable="true" mnemonicParsing="false" onAction="#getSymbols" text="Next"
+                GridPane.columnIndex="4" GridPane.rowIndex="2"/>
+        <TextField fx:id="symbolsTextfield" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+        <Label fx:id="symbolsLabel" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Label>
+        <Label fx:id="invalidLabel" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <font>
+                <Font name="System Bold" size="12.0"/>
+            </font>
+        </Label>
+    </GridPane>
+</AnchorPane>

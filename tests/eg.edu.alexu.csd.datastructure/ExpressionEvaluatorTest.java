@@ -60,6 +60,9 @@ class ExpressionEvaluatorTest {
         assertFalse(ev.validInfix(" ", false));
         assertFalse(ev.validInfix(")", false));
         assertTrue(ev.validInfix("0", false));
+        assertTrue(ev.validInfix("a/(-b)", false));
+        assertTrue(ev.validInfix("(-b)", false));
+        assertTrue(ev.validInfix("5*-(b /-(a-2))", false));
         assertFalse(ev.validInfix("-5*((6*", false));
     }
 

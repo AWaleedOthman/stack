@@ -1,0 +1,187 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="htmlId">
+<head>
+  <title>Coverage Report :: UIApplication</title>
+  <style type="text/css">
+    @import "../../.css/coverage.css";
+  </style>
+</head>
+
+<body>
+<div class="header"></div>
+
+<div class="content">
+<div class="breadCrumbs">
+    [ <a href="../../index.html">all classes</a> ]
+    [ <a href="../index.html">eg.edu.alexu.csd.datastructure</a> ]
+</div>
+
+<h1>Coverage Summary for Class: UIApplication (eg.edu.alexu.csd.datastructure)</h1>
+
+<table class="coverageStats">
+<tr>
+  <th class="name">Class</th>
+<th class="coverageStat 
+">
+  Class, %
+</th>
+<th class="coverageStat 
+">
+  Method, %
+</th>
+<th class="coverageStat 
+">
+  Line, %
+</th>
+</tr>
+<tr>
+  <td class="name">UIApplication</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 1)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 2)
+  </span>
+</td>
+<td class="coverageStat">
+  <span class="percent">
+    0%
+  </span>
+  <span class="absValue">
+    (0/ 73)
+  </span>
+</td>
+</tr>
+
+</table>
+
+<br/>
+<br/>
+
+
+<div class="sourceCode"><i>1</i>&nbsp;package eg.edu.alexu.csd.datastructure;
+<i>2</i>&nbsp;
+<i>3</i>&nbsp;import java.util.Scanner;
+<i>4</i>&nbsp;
+<b class="nc"><i>5</i>&nbsp;public class UIApplication {</b>
+<i>6</i>&nbsp;
+<i>7</i>&nbsp;    public static void main(String[] args) {
+<b class="nc"><i>8</i>&nbsp;        System.out.println(&quot;\n-Anything apart from {+, -, *, /, (, )} is considered an operand.\n&quot; +</b>
+<i>9</i>&nbsp;                &quot;-Operands can be more than one character without space—i.e. \&quot;ab\&quot; is one operand,\n whereas \&quot;a b\&quot; &quot; +
+<i>10</i>&nbsp;                &quot;are two different operands.\n&quot; +
+<i>11</i>&nbsp;                &quot;-\&quot;x_2\&quot;, \&quot;x2\&quot;, \&quot;Xn\&quot;, \&quot;Xnew\&quot;, etc... are all examples of operands.\n&quot;);
+<b class="nc"><i>12</i>&nbsp;        ExpressionEvaluator ev = new ExpressionEvaluator();</b>
+<b class="nc"><i>13</i>&nbsp;        String postfix = &quot;&quot;, infix = &quot;&quot;;</b>
+<b class="nc"><i>14</i>&nbsp;        Scanner sc = new Scanner(System.in);</b>
+<i>15</i>&nbsp;        String in;
+<b class="nc"><i>16</i>&nbsp;        boolean same = false;</b>
+<i>17</i>&nbsp;        while (true) {
+<b class="nc"><i>18</i>&nbsp;            boolean flag = false;</b>
+<b class="nc"><i>19</i>&nbsp;            if (!same) {</b>
+<b class="nc"><i>20</i>&nbsp;                System.out.println(&quot;=================================&quot;);</b>
+<b class="nc"><i>21</i>&nbsp;                System.out.println(&quot;(input \&quot;exit\&quot; to exit)&quot;);</b>
+<b class="nc"><i>22</i>&nbsp;                System.out.println(&quot;Enter infix expression:&quot;);</b>
+<b class="nc"><i>23</i>&nbsp;                in = sc.nextLine();</b>
+<b class="nc"><i>24</i>&nbsp;                if (in.trim().equalsIgnoreCase(&quot;exit&quot;)) break;</b>
+<b class="nc"><i>25</i>&nbsp;                in = ev.fixInfix(in);</b>
+<i>26</i>&nbsp;
+<b class="nc"><i>27</i>&nbsp;                while (!ev.validInfix(in, true)) {</b>
+<b class="nc"><i>28</i>&nbsp;                    System.out.println(&quot;Invalid Input&quot;);</b>
+<b class="nc"><i>29</i>&nbsp;                    System.out.println(&quot;=================================&quot;);</b>
+<b class="nc"><i>30</i>&nbsp;                    System.out.println(&quot;(input \&quot;exit\&quot; to exit)&quot;);</b>
+<b class="nc"><i>31</i>&nbsp;                    System.out.println(&quot;Enter infix expression&quot;);</b>
+<b class="nc"><i>32</i>&nbsp;                    in = sc.nextLine();</b>
+<b class="nc"><i>33</i>&nbsp;                    if (in.trim().equalsIgnoreCase(&quot;exit&quot;)) {</b>
+<b class="nc"><i>34</i>&nbsp;                        flag = true;</b>
+<b class="nc"><i>35</i>&nbsp;                        break;</b>
+<i>36</i>&nbsp;                    }
+<b class="nc"><i>37</i>&nbsp;                    in = ev.fixInfix(in);</b>
+<i>38</i>&nbsp;                }
+<b class="nc"><i>39</i>&nbsp;                if (flag) break;</b>
+<b class="nc"><i>40</i>&nbsp;                flag = false;</b>
+<i>41</i>&nbsp;
+<i>42</i>&nbsp;                /*infix is valid*/
+<b class="nc"><i>43</i>&nbsp;                infix = in;</b>
+<b class="nc"><i>44</i>&nbsp;                postfix = ev.infixToPostfix(infix);</b>
+<b class="nc"><i>45</i>&nbsp;                same = true;</b>
+<i>46</i>&nbsp;            }
+<b class="nc"><i>47</i>&nbsp;            System.out.println(&quot;=================================&quot;);</b>
+<b class="nc"><i>48</i>&nbsp;            System.out.println(&quot;infix: &quot; + infix + &quot;\npostfix: &quot; + postfix);</b>
+<i>49</i>&nbsp;            try {
+<b class="nc"><i>50</i>&nbsp;                Thread.sleep(1000);</b>
+<b class="nc"><i>51</i>&nbsp;            } catch (InterruptedException e) {</b>
+<b class="nc"><i>52</i>&nbsp;                e.printStackTrace();</b>
+<b class="nc"><i>53</i>&nbsp;            }</b>
+<i>54</i>&nbsp;
+<b class="nc"><i>55</i>&nbsp;            Stack symbols = new Stack();</b>
+<b class="nc"><i>56</i>&nbsp;            Scanner temp = new Scanner(postfix);</b>
+<i>57</i>&nbsp;            String inTemp;
+<i>58</i>&nbsp;            /*creating a stack of symbols in postfix*/
+<b class="nc"><i>59</i>&nbsp;            while (temp.hasNext()) {</b>
+<b class="nc"><i>60</i>&nbsp;                inTemp = temp.next();</b>
+<b class="nc"><i>61</i>&nbsp;                if (!inTemp.matches(&quot;[+--*/]&quot;)/*NOT operand (symbol or int)*/ &amp;&amp; !inTemp.matches(&quot;\\d+&quot;)/*Not int*/) {</b>
+<b class="nc"><i>62</i>&nbsp;                    symbols.push(inTemp);</b>
+<i>63</i>&nbsp;                }
+<i>64</i>&nbsp;            }
+<b class="nc"><i>65</i>&nbsp;            symbols.reverse();</b>
+<b class="nc"><i>66</i>&nbsp;            temp.close();</b>
+<b class="nc"><i>67</i>&nbsp;            if (symbols.size() == 0) same = false;</b>
+<i>68</i>&nbsp;
+<b class="nc"><i>69</i>&nbsp;            String expression = postfix;</b>
+<i>70</i>&nbsp;            int val;
+<b class="nc"><i>71</i>&nbsp;            while (!symbols.isEmpty()) {</b>
+<b class="nc"><i>72</i>&nbsp;                if (!expression.contains((String) symbols.peek())) {//solves problem of duplicate symbols</b>
+<b class="nc"><i>73</i>&nbsp;                    symbols.pop();</b>
+<b class="nc"><i>74</i>&nbsp;                    continue;</b>
+<i>75</i>&nbsp;                }
+<b class="nc"><i>76</i>&nbsp;                System.out.println(&quot;=================================&quot;);</b>
+<b class="nc"><i>77</i>&nbsp;                System.out.println(&quot;(input \&quot;back\&quot; to go back)&quot;);</b>
+<b class="nc"><i>78</i>&nbsp;                System.out.println(&quot;Enter value for &quot; + symbols.peek() + &quot; :&quot;);</b>
+<b class="nc"><i>79</i>&nbsp;                in = sc.nextLine();</b>
+<b class="nc"><i>80</i>&nbsp;                if (in.trim().equalsIgnoreCase(&quot;back&quot;)) {</b>
+<b class="nc"><i>81</i>&nbsp;                    flag = true;</b>
+<b class="nc"><i>82</i>&nbsp;                    same = false;</b>
+<b class="nc"><i>83</i>&nbsp;                    break;</b>
+<i>84</i>&nbsp;                }
+<i>85</i>&nbsp;                try {
+<b class="nc"><i>86</i>&nbsp;                    val = Integer.parseInt(in);</b>
+<b class="nc"><i>87</i>&nbsp;                } catch (Exception e) {</b>
+<b class="nc"><i>88</i>&nbsp;                    System.out.println(&quot;Invalid Input&quot;);</b>
+<b class="nc"><i>89</i>&nbsp;                    continue;</b>
+<b class="nc"><i>90</i>&nbsp;                }</b>
+<b class="nc"><i>91</i>&nbsp;                expression = expression.replaceAll((String) symbols.pop(), Integer.toString(val));</b>
+<i>92</i>&nbsp;            }
+<b class="nc"><i>93</i>&nbsp;            if (flag) continue;</b>
+<b class="nc"><i>94</i>&nbsp;            System.out.println(&quot;=================================&quot;);</b>
+<b class="nc"><i>95</i>&nbsp;            System.out.println(&quot;Result = &quot; + ev.evaluate(expression));</b>
+<i>96</i>&nbsp;            try {
+<b class="nc"><i>97</i>&nbsp;                Thread.sleep(1000);</b>
+<b class="nc"><i>98</i>&nbsp;            } catch (InterruptedException e) {</b>
+<b class="nc"><i>99</i>&nbsp;                e.printStackTrace();</b>
+<b class="nc"><i>100</i>&nbsp;            }</b>
+<b class="nc"><i>101</i>&nbsp;        }</b>
+<b class="nc"><i>102</i>&nbsp;        sc.close();</b>
+<b class="nc"><i>103</i>&nbsp;    }</b>
+<i>104</i>&nbsp;}
+</div>
+</div>
+
+<div class="footer">
+    
+    <div style="float:right;">generated on 2020-04-01 19:49</div>
+</div>
+</body>
+</html>
