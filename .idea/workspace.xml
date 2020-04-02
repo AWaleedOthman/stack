@@ -2,22 +2,50 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="stackGUI:jar" />
       <artifact name="stackUI:jar" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1149e5f4-4a91-44cf-a225-144b1a56b041" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/stackUI_jar.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/stack_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/stack/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/eg/edu/alexu/csd/datastructure/UIApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eg/edu/alexu/csd/datastructure/UIApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack.iml" beforeDir="false" afterPath="$PROJECT_DIR$/stack.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/stack.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/eg.edu.alexu.csd.datastructure/ExpressionEvaluatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/tests/eg.edu.alexu.csd.datastructure/ExpressionEvaluatorTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/.classes/GUIApplication.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/.classes/GUIApplication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/.classes/Scene.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/.classes/Scene.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_BLOCK.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_CLASS.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_CLASS_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_LINE.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_LINE.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_LINE_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_METHOD.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_METHOD_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_NAME_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/GUI/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/.classes/ExpressionEvaluator.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/.classes/ExpressionEvaluator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/.classes/IExpressionEvaluator.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/.classes/IExpressionEvaluator.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/.classes/IStack.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/.classes/IStack.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/.classes/Stack.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/.classes/Stack.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/.classes/UIApplication.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/.classes/UIApplication.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_BLOCK.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_CLASS.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_CLASS_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_LINE.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_LINE.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_LINE_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_METHOD.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_METHOD_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_NAME_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/eg.edu.alexu.csd.datastructure/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_BLOCK.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_BLOCK.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_BLOCK_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_BLOCK_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_CLASS.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_CLASS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_CLASS_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_CLASS_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_LINE.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_LINE.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_LINE_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_LINE_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_METHOD.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_METHOD.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_METHOD_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_METHOD_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_NAME_DESC.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/stack/coverage report/index_SORT_BY_NAME_DESC.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/eg/edu/alexu/csd/datastructure/ExpressionEvaluator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/eg/edu/alexu/csd/datastructure/ExpressionEvaluator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +116,7 @@
       <recent name="D:\Uni\Term4\Data Structures\Labs\stack\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in stack">
+  <component name="RunManager" selected="Application.UIApplication">
     <configuration name="GUIApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="GUI.GUIApplication" />
       <module name="stack" />
@@ -165,9 +193,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.UIApplication" />
         <item itemvalue="JUnit.All in stack" />
         <item itemvalue="JUnit.ExpressionEvaluatorTest.validateInfix" />
-        <item itemvalue="Application.UIApplication" />
         <item itemvalue="Application.GUIApplication" />
         <item itemvalue="JUnit.ExpressionEvaluatorTest.validatePostfix" />
       </list>
@@ -203,6 +231,8 @@
       <workItem from="1585605313855" duration="1107000" />
       <workItem from="1585761677734" duration="727000" />
       <workItem from="1585762911330" duration="520000" />
+      <workItem from="1585828708127" duration="49000" />
+      <workItem from="1585828796758" duration="169000" />
     </task>
     <task id="LOCAL-00001" summary="UIApplication">
       <created>1585411704072</created>
@@ -253,22 +283,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="503" y="157" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1585762686893" />
-    <state width="1493" height="81" key="GridCell.Tab.0.bottom" timestamp="1585763433158">
+    <state width="1493" height="307" key="GridCell.Tab.0.bottom" timestamp="1585828756445">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="81" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585763433158" />
-    <state width="1493" height="81" key="GridCell.Tab.0.center" timestamp="1585763433158">
+    <state width="1493" height="307" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1585828756445" />
+    <state width="1493" height="307" key="GridCell.Tab.0.center" timestamp="1585828756445">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="81" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585763433158" />
-    <state width="1493" height="81" key="GridCell.Tab.0.left" timestamp="1585763433158">
+    <state width="1493" height="307" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1585828756445" />
+    <state width="1493" height="307" key="GridCell.Tab.0.left" timestamp="1585828756445">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="81" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585763433158" />
-    <state width="1493" height="81" key="GridCell.Tab.0.right" timestamp="1585763433158">
+    <state width="1493" height="307" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1585828756445" />
+    <state width="1493" height="307" key="GridCell.Tab.0.right" timestamp="1585828756445">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="81" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585763433158" />
+    <state width="1493" height="307" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1585828756445" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1585598456767">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -293,10 +323,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1585263743366" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585762911723">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1585828796943">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585762911723" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1585828796943" />
     <state x="498" y="313" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585262539075">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

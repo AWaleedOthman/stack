@@ -58,10 +58,10 @@
 </td>
 <td class="coverageStat">
   <span class="percent">
-    91%
+    100%
   </span>
   <span class="absValue">
-    (121/ 133)
+    (133/ 133)
   </span>
 </td>
 </tr>
@@ -174,9 +174,9 @@
 <b class="fc"><i>100</i>&nbsp;        Pattern p = Pattern.compile(&quot;\\( -|/ -|\\* -&quot;);</b>
 <b class="fc"><i>101</i>&nbsp;        Matcher m = p.matcher(sb);</b>
 <b class="fc"><i>102</i>&nbsp;        while (m.find()) {</b>
-<b class="nc"><i>103</i>&nbsp;            i = m.start() + 2;</b>
-<b class="nc"><i>104</i>&nbsp;            if (addParenthesis(sb, i)) return &quot;&quot;;</b>
-<b class="nc"><i>105</i>&nbsp;            m = p.matcher(sb);</b>
+<b class="fc"><i>103</i>&nbsp;            i = m.start() + 2;</b>
+<b class="fc"><i>104</i>&nbsp;            if (addParenthesis(sb, i)) return &quot;&quot;;</b>
+<b class="fc"><i>105</i>&nbsp;            m = p.matcher(sb);</b>
 <i>106</i>&nbsp;        }
 <b class="fc"><i>107</i>&nbsp;        return sb.toString();</b>
 <i>108</i>&nbsp;    }
@@ -186,16 +186,16 @@
 <b class="fc"><i>112</i>&nbsp;        i += 4;</b>
 <b class="fc"><i>113</i>&nbsp;        if (!sb.substring(i + 2, i + 3).matches(&quot;[+--*/()]&quot;)/*operand*/) {//operand after negative</b>
 <b class="fc"><i>114</i>&nbsp;            sb.insert(i + 3, &quot; )&quot;);</b>
-<b class="nc"><i>115</i>&nbsp;        } else if (sb.charAt(i + 2) == &#39;(&#39;) {//&#39;(&#39; after negative</b>
-<b class="nc"><i>116</i>&nbsp;            int closingIndex = i + 2;</b>
-<b class="nc"><i>117</i>&nbsp;            int parenthesis = 1;</b>
-<b class="nc"><i>118</i>&nbsp;            while (closingIndex &lt; sb.length() &amp;&amp; parenthesis != 0) {</b>
-<b class="nc"><i>119</i>&nbsp;                ++closingIndex;</b>
-<b class="nc"><i>120</i>&nbsp;                if (sb.charAt(closingIndex) == &#39;(&#39;) ++parenthesis;</b>
-<b class="nc"><i>121</i>&nbsp;                else if (sb.charAt(closingIndex) == &#39;)&#39;) --parenthesis;</b>
+<b class="fc"><i>115</i>&nbsp;        } else if (sb.charAt(i + 2) == &#39;(&#39;) {//&#39;(&#39; after negative</b>
+<b class="fc"><i>116</i>&nbsp;            int closingIndex = i + 2;</b>
+<b class="fc"><i>117</i>&nbsp;            int parenthesis = 1;</b>
+<b class="fc"><i>118</i>&nbsp;            while (closingIndex &lt; sb.length() &amp;&amp; parenthesis != 0) {</b>
+<b class="fc"><i>119</i>&nbsp;                ++closingIndex;</b>
+<b class="fc"><i>120</i>&nbsp;                if (sb.charAt(closingIndex) == &#39;(&#39;) ++parenthesis;</b>
+<b class="fc"><i>121</i>&nbsp;                else if (sb.charAt(closingIndex) == &#39;)&#39;) --parenthesis;</b>
 <i>122</i>&nbsp;            }
-<b class="nc"><i>123</i>&nbsp;            if (parenthesis != 0) return true; //invalid</b>
-<b class="nc"><i>124</i>&nbsp;            sb.replace(i + 2, closingIndex + 1, fixInfix(sb.substring(i + 2, closingIndex + 1) + &quot; )&quot;));</b>
+<b class="fc"><i>123</i>&nbsp;            if (parenthesis != 0) return true; //invalid</b>
+<b class="fc"><i>124</i>&nbsp;            sb.replace(i + 2, closingIndex + 1, fixInfix(sb.substring(i + 2, closingIndex + 1) + &quot; )&quot;));</b>
 <i>125</i>&nbsp;        }
 <b class="fc"><i>126</i>&nbsp;        return false;</b>
 <i>127</i>&nbsp;    }
@@ -342,7 +342,7 @@
 
 <div class="footer">
     
-    <div style="float:right;">generated on 2020-04-01 19:38</div>
+    <div style="float:right;">generated on 2020-04-01 19:49</div>
 </div>
 </body>
 </html>

@@ -228,7 +228,15 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
              before calling getRes
              */
             default: // or case '/':
-                if (y == 0) throw new RuntimeException("Division by zero");
+                if (y == 0) {
+                    System.out.println("Error: Division by zero");
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                    throw new RuntimeException("Division by zero");
+                }
                 return x / y;
         }
     }
@@ -239,7 +247,7 @@ public class ExpressionEvaluator implements IExpressionEvaluator {
      * of operators has to be equal to the number of operands minus one in the end.
      *
      * @param expression: postfix expression to be validated
-     * @param fixed:     if the expression is space separated
+     * @param fixed:      if the expression is space separated
      * @return true if the postfix expression is valid and false otherwise
      */
     public boolean validPostfix(String expression, boolean fixed) {
